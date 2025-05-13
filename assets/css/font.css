@@ -1,0 +1,30 @@
+
+/*-------- Signature Fonts ---------*/
+@font-face {
+    font-family: 'PmPmFont';
+    src: url('../fonts/gg_black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ArialUnicode';
+    src: url('../fonts/arial_unicode.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Impact';
+    src: url('../fonts/impact.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'RockBilly';
+    src: url('../fonts/rockybilly.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Beauty';
+    src: url('../fonts/beauty.ttf') format('truetype');
+}
+  
+.pompoki-font {
+    font-family: 'PmPmFont', system-ui;
+}

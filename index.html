@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <link href="assets/images/logo.GIF" rel="icon" />
+    <title>POMPOKI.tcg | V1</title>
+    <meta name="description" content="An official @pompoki Discord Bot website!">
+    <meta name="author" content="testwak">
+    <!-- Stylesheet
+============================== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+    <!-- Font Awesome Icon V2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
+    <!-- Highlight Syntax -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+    <!-- Custom Font -->
+    <link rel="stylesheet" href="assets/css/font.css">
+    
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Document Wrapper   
+=============================== -->
+    <div id="main-wrapper">
+        <!-- Header
+  ============================ -->
+        <header id="header" class="sticky-top">
+            <!-- Navbar -->
+            <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+                <div class="container-fluid">
+                    <!-- Sidebar Toggler -->
+                    <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none"
+                        type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+
+                    <!-- Logo -->
+                    <a class="logo ml-md-3 " href="index.html" title="Pompoki Document"> <img
+                            src="assets/images/logo.GIF" alt="Pompoki Document"
+                            style="width: 35px; border-radius: 5px; margin-right: 10px;" /> </a>
+                    <a class="pompoki-font"
+                        style="color: aliceblue; font-size: 20px; text-decoration: none;">@POMPOKI.tcg</a>
+                    <span class="text-2 ml-2">v1</span>
+                    <!-- Logo End -->
+
+                    <!-- Navbar Toggler -->
+                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                        data-target="#header-nav"><span></span><span></span><span></span></button>
+
+                    <div id="header-nav" class="collapse navbar-collapse justify-content-end">
+                        <ul class="navbar-nav">
+                            <!---
+                            <li class="dropdown"> <a class="dropdown-toggle" href="#">Dropdown</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Dropdown
+                                            Action</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="index.html">Action</a></li>
+                                            <li><a class="dropdown-item" href="feature-header-dark.html">Another
+                                                    Action</a></li>
+                                            <li><a class="dropdown-item" href="feature-header-primary.html">Something
+                                                    Else Here</a></li>
+                                            <li><a class="dropdown-item" href="index-2.html">Another Link</a></li>
+                                        </ul>
+                                    </li> 
+                                    <li><a class="dropdown-item" href="#">Another Action</a>
+                                    <li><a class="dropdown-item" href="#">Something Else Here</a></li>
+                                </ul>
+                            </li>
+                            <li><a target="_blank"
+                                    href="https://themeforest.net/user/harnishdesign/portfolio?ref=HarnishDesign">Other Template</a>
+                            </li> -->
+                            <li><a href="index.html#idocs_support">Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+                        <li class="social-icons-twitter"><a data-toggle="tooltip"
+                                href="https://x.com/pompokibot?s=21" target="_blank" title=""
+                                data-original-title="X"><i class="fab fa-x-twitter"></i></a></li>
+                        <li class="social-icons-facebook"><a data-toggle="tooltip"
+                                href="https://discord.gg/7kjJm6XYJ3" target="_blank" title=""
+                                data-original-title="Discord"><i class="fa-brands fa-discord"></i></a></li>
+                        <li class="social-icons-dribbble"><a data-toggle="tooltip"
+                                href="https://www.patreon.com/pompoki" target="_blank" title=""
+                                data-original-title="Patreon"><i class="fab fa-patreon"></i></a></li>
+                    </ul> 
+                </div>
+            </nav>
+            <!-- Navbar End -->
+        </header>
+        <!-- Header End -->
+
+        <!-- Content
+  ============================ -->
+  <div style="opacity: 15%;" id="cardContainer"></div>
+  <script src="assets/js/script.js" type="text/javascript"></script>
+        <div id="content" role="main">
+            <!-- Sidebar Navigation
+  ============================ -->
+            <div class="idocs-navigation bg-light-1">
+                <ul class="nav flex-column ">
+                    <li class="nav-item"><a class="nav-link active" href="#idocs_start">Getting Started</a>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link" href="#idocs_installation">Installation</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#idocs_html_structure">Registeration</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#idocs_layout">Documentation</a>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link" href="#idocs_header">Commands</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#idocs_faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#idocs_source_credits">Source & Credits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#idocs_support">Support</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#idocs_changelog">Changelog</a>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link" href="#v1-0">v1.0 <span class="badge badge-primary">New</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Docs Content ============================ -->
+            <div class="idocs-content">
+                <div class="container">
+
+                    <!-- Getting Started ============================ -->
+                    <section id="idocs_start">
+                        <h1 class="pompoki-font">Getting Started!</h1>
+                        <h2 style="font-size: 15px;"> <span class="pompoki-font">@pompoki</span> is a HoYo-themed TCG bot for <span class="pompoki-font">Discord</span>, letting you collect and battle a boss using cards from 
+                            <img src="assets/images/genshin-icon.png" width="20px" style="border-radius: 5px; position: relative; top: 5px;"> Genshin Impact, 
+                            <img src="assets/images/hsr-icon.png" width="20px" style="border-radius: 5px; position: relative; top: 5px;"> Honkai: Star Rail, and 
+                            <img src="assets/images/zzz-icon.png" width="20px" style="border-radius: 5px; position: relative; top: 5px;"> Zenless Zone Zero. 
+                            It features a retro aesthetic, rarity/pity system, and engaging gameplay mechanics <span class="text-2 ml-2 pompoki-font">:^|</span> </h2>
+                        
+                        <hr class="divider">
+                        
+                        <div class="row">
+                            <div class="col-sm-6 col-lg-4">
+                                <ul class="list-unstyled">
+                                    <li><strong>Version:</strong> 1.0</li>
+                                    <li><strong class="font-weight-700">Created:</strong> 12 May, 2025</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6 col-lg-4">
+                                <ul class="list-unstyled">
+                                    <li><strong>Last Update:</strong> 12 May, 2025</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="alert alert-info">If you have any questions that are beyond the scope of this document or any grammatical problems, please feel free to join our <a target="_blank" class="pompoki-font" style="color: #a0312d;" href="https://discord.gg/7kjJm6XYJ3"><i class="fas fa-external-link-alt"></i> Support Server</a>.</p>                
+                        
+                        <div class="stats-container">
+                            <div class="stat-card">
+                                <div class="stat-number" data-target="1001" data-suffix="+">0</div>
+                                <div class="stat-label">Type Of Cards</div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-number" data-target="4700" data-suffix="+">0</div>
+                                <div class="stat-label">Collectors</div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-number" data-target="120" data-suffix="k+">0</div>
+                                <div class="stat-label">Cards Existed</div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-number" data-target="500" data-suffix="k+">0</div>
+                                <div class="stat-label">Cards Spawned</div>
+                            </div>
+                        </div>
+                    
+                        <script>
+                            // Function to animate counting up to a target number
+                            function animateCounter(element, target, duration = 2000, step = 50) {
+                                let start = 0;
+                                const increment = target / (duration / step);
+                                const timer = setInterval(() => {
+                                    start += increment;
+                                    if (start > target) {
+                                        element.textContent = Math.floor(target);
+                                        clearInterval(timer);
+                                    } else {
+                                        element.textContent = Math.floor(start);
+                                    }
+                                    element.classList.add('animate-in');
+                                }, step);
+                            }
+                    
+                            // Start animation when the page is loaded
+                            document.addEventListener('DOMContentLoaded', () => {
+                                const counters = document.querySelectorAll('.stat-number');
+                                counters.forEach(counter => {
+                                    const target = parseInt(counter.getAttribute('data-target'));
+                                    // Different speeds for different numbers
+                                    const duration = 1000 + Math.random() * 1500;
+                                    animateCounter(counter, target, duration);
+                                });
+                            });
+                    
+                            // Restart animation when elements come into view
+                            const observer = new IntersectionObserver((entries) => {
+                                entries.forEach(entry => {
+                                    if (entry.isIntersecting) {
+                                        const counter = entry.target;
+                                        const target = parseInt(counter.getAttribute('data-target'));
+                                        counter.textContent = '0';
+                                        const duration = 1000 + Math.random() * 1500;
+                                        animateCounter(counter, target, duration);
+                                    }
+                                });
+                            }, { threshold: 0.5 });
+                    
+                            document.querySelectorAll('.stat-number').forEach(counter => {
+                                observer.observe(counter);
+                            });
+                        </script>
+
+                    </section>
+
+                    <!-- Installation ============================ -->
+                    <section id="idocs_installation">
+
+                        <h2 class="pompoki-font">Installation</h2>
+                        <p class="lead">To install the <span class="pompoki-font" style="font-size: 18px;">@pompoki</span> bot in your guild or any other guild, follow these steps:</p>
+                        <ol>
+                            <li> <b>Invite the Bot:</b> <a style="color: #a0312d;" href="https://discord.com/oauth2/authorize?client_id=1163037938263806002">Click here</a> to invite the bot to your access guild. </li>
+                            <li> <b>Select Server:</b> Choose the server where you want to add <span class="pompoki-font" style="font-size: 14px;">@pompoki</span>. You must have the Manage Server permission in that server. </li>
+                            <li> <b>Grant Permissions:</b> Ensure the bot has the necessary permissions to function correctly. While the exact permissions required for <span class="pompoki-font" style="font-size: 14px;">@pompoki</span> are not specified in the provided sources, it's common for <span class="pompoki-font" style="font-size: 14px;">@pompoki</span> to need permissions like:
+                                <ul>
+                                    <li>Send Messages</li>
+                                    <li>Embed Links</li>
+                                    <li>Message History</li> 
+                                    <li>Manage Messages (delete messages)</li>
+                                    <li>Use External Emojis (custom emojis)</li>
+                                </ul>
+                                These permissions allow the bot to interact with users and perform its functions effectively.
+                            </li>
+                            <li> <b>Authorize the Bot:</b> After selecting the permissions, click Authorize to add the bot to your server.</li>
+                            
+                            <!-- Tip Box with Line -->
+                            <div class="whisper-tip-box">
+                                <div class="whisper-tip-line"></div>
+                                <div class="whisper-tip-content">
+                                <h3 class="whisper-tip-title">Note:</h3>
+                                <p class="whisper-tip-text">The bot may require additional permissions depending on its features. Always review the permissions requested and ensure they align with the bot's intended functionality.</p>
+                                </div>
+                            </div>
+                        </ol>
+                    <div style="display: flex; justify-content: center; overflow: hidden;">
+                        <a class="popup-img" href="assets/guide/install1.png">
+                            <img src="assets/guide/install1.png" width="400px" style="border-radius: 5px; zoom: 1; outline: 5px solid #FCF7F4; outline-offset: -4px; margin-bottom: 10px;">
+                        </a>
+                    </div>
+
+                    <p style="text-align: center;">Make sure all the permissions are checked!</p>
+
+                    <div style="display: flex; justify-content: center; overflow: hidden;">
+                        <a class="popup-img" href="assets/guide/install2.png">
+                            <img src="assets/guide/install2.png" width="400px" style="border-radius: 5px; zoom: 1; outline: 5px solid #FCF7F4; outline-offset: -4px; margin-bottom: 10px;">
+                        </a>
+                    </div>
+                    
+                    <p style="text-align: center;">Now open <span class="pompoki-font" width="50%">Discord</span> and find the selected server. You will see a join message from the bot!</p>
+
+                    <div style="display: flex; justify-content: center; overflow: hidden;">
+                        <a class="popup-img" href="assets/guide/install3.png">
+                            <img src="assets/guide/install3.png" width="400px" style="border-radius: 5px; zoom: 1; outline: 5px solid #FCF7F4; outline-offset: -4px; margin-bottom: 10px;">
+                        </a>
+                    </div>
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- Registeration
+    ============================ -->
+                    <section id="idocs_html_structure">
+                        <h2 class="pompoki-font">Registeration - TOS</h2>
+                        <p>Thank you for choosing Pompoki TCG! Before proceeding with registration, please review and agree to our Terms of Service. Once you're done, run <code>/register</code> to procceed!
+
+                        <!-- Tip Box with Line -->
+                        <div class="whisper-tip-box">
+                            <div class="whisper-tip-line"></div>
+                            <div class="whisper-tip-content">
+                            <h3 class="whisper-tip-title">Account Usage</h3>
+                            <p class="whisper-tip-text">
+                                Your data will be stored in our database for game progression purposes. You are responsible for all activities conducted under your account. One account per Discord user is permitted.
+                            </p>
+
+                            <h3 class="whisper-tip-title">Game Rules</h3>
+                            <p class="whisper-tip-text">Players must follow fair play guidelines when using Pompoki TCG features. ⚠️ Any attempt to exploit the system may result in account restrictions or termination. Respect other players and maintain appropriate conduct within the game.</p>
+                            
+                            <h3 class="whisper-tip-title">Privacy</h3>
+                            <p class="whisper-tip-text">We collect minimal data necessary for game functionality. Your Discord ID and game progress will be securely stored. We respect your privacy and handle your information with care.</p>
+
+                            <h3 class="whisper-tip-title">Data Security</h3>
+                            <p class="whisper-tip-text">We implement appropriate measures to protect your information. We will not share your data with third parties without your consent. Regular security reviews are conducted to ensure data protection.</p>
+
+                            <h3 class="whisper-tip-title">User Rights</h3>
+                            <p class="whisper-tip-text">You have the right to access, modify, or delete your data at any time. You can request data deletion by contacting our support team. We will respond to all data-related inquiries promptly.</p>
+
+                            <h3 class="whisper-tip-title">Limitation of Liability</h3>
+                            <p class="whisper-tip-text"> We are not liable for any damages or losses resulting from the use of Pompoki TCG. By using Pompoki TCG, you agree to these terms and conditions. We reserve the right to modify game features as needed.</p>
+
+                            <h3 class="whisper-tip-title">Changes to Terms</h3>
+                            <p class="whisper-tip-text">We may update these terms from time to time. Continued use of Pompoki TCG after changes constitutes acceptance of the new terms. Major changes will be communicated to users through appropriate channels.</p>
+
+                            </div>
+                        </div>
+
+                        <p class="alert alert-info">For questions or concerns, please reach out through our support server. Our team is available to help with any issues you may encounter. Feature requests and feedback are always welcome. <a
+                                target="_blank"
+                                href="https://discord.gg/7kjJm6XYJ3" class="pompoki-font" style="color: #a0312d;">I am here!</a></p>
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- Documentation
+    ============================ -->
+                    <section id="idocs_layout">
+                        <h1 class="pompoki-font">Documentation</h1>
+                        <p class="lead mb-5">Documentation and examples for header, navbar, sidebar, footer</p>
+                    </section>
+
+                    <hr class="divider">
+                    
+                    <!-- Header
+    ============================ -->
+                    <section id="idocs_header">
+                        <h2 class="pompoki-font">Commands</h2>
+                        <p>The list of various header types & its descriptions are provided below for your reference:
+                        </p>
+                        
+                        <div class="dsc-container">
+                            <div class="dsc-command-flow">
+                              <div class="dsc-connection-line"></div>
+                              <!-- Commands will be added here -->
+                            </div>
+                        </div>
+                        
+                        <script>
+                            const commands = [
+                                {
+                                    name: "achievements",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "Target user" },
+                                    { name: "filter", type: "Choice", required: false, desc: "Filtering" }
+                                    ]
+                                },
+                                {
+                                    name: "balance",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" }
+                                    ]
+                                }
+                                ,
+                                {
+                                    name: "burn card",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "card collection",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "card rank",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "cooldown",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "daily quests",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "daily rewards",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "event pack_card",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "event pack_info",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "exchange box",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "exchange dice",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "gift card",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "gift currency",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "/help",
+                                    description: "Kinda useless for now lol",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "hourly",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "hunt",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "leaderboard cards",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "leaderboard users",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "marketplace add",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "marketplace buy",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "marketplace remove",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "marketplace view",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "pack card",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "pack plushy",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "plushy collection",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "profile card",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "profile edit",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "raid",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "redeem code",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "register",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "search asset",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "search card",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "search plushy",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "settings",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "shop theme_buy",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "shop theme_view",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "trade start",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "trivia",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "view card",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "weekly rewards",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "wishlist add",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "wishlist remove",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                },
+                                {
+                                    name: "wishlist view",
+                                    description: "",
+                                    parameters: [
+                                    { name: "user", type: "User", required: true, desc: "" },
+                                    { name: "reason", type: "String", required: false, desc: "" }
+                                    ]
+                                }
+                            ];
+
+                            const flow = document.querySelector(".dsc-command-flow");
+                            commands.forEach((cmd, i) => {
+                            const id = `cmd-${i}`;
+                            
+                            // Wrapper
+                            const wrapper = document.createElement("div");
+                            wrapper.className = "dsc-option-wrapper";
+                            wrapper.innerHTML = `
+                                <div class="dsc-option-dot"></div>
+                                <div class="dsc-option-box" onclick="toggleDropdown('${id}')">
+                                    <div class="dsc-option-title"><span class="dsc-slash">/</span>${cmd.name}</div>
+                                    <div class="dsc-option-desc">${cmd.description}</div>
+                                </div>
+                            `;
+                            
+                            // Dropdown
+                            const dropdown = document.createElement("div");
+                            dropdown.id = id;
+                            dropdown.className = "dsc-dropdown";
+                            
+                            let paramHTML = '';
+                            if (cmd.parameters?.length) {
+                                cmd.parameters.forEach(p => {
+                                paramHTML += `
+                                    <div class="dsc-param">
+                                    <div class="dsc-param-name">${p.name}</div>
+                                    <div class="dsc-param-type">${p.type}</div>
+                                    <div class="${p.required ? 'dsc-param-required' : 'dsc-param-optional'}">
+                                        ${p.required ? 'Required' : 'Optional'}
+                                    </div>
+                                    <div class="dsc-param-desc">${p.desc}</div>
+                                    </div>
+                                `;
+                                });
+                            }
+
+                            dropdown.innerHTML = `
+                                <div class="dsc-dropdown-content">
+                                ${cmd.parameters?.length ? `
+                                    <p>Parameters for this command:</p>
+                                    ${paramHTML}
+                                ` : `<p>No parameters for this command.</p>`}
+                                </div>
+                            `;
+                            
+                            // Add to page
+                            flow.appendChild(wrapper);
+                            flow.appendChild(dropdown);
+                            });
+
+                            // Toggle logic
+                            function toggleDropdown(id) {
+                            document.getElementById(id)?.classList.toggle("dsc-active");
+                            }
+
+                        </script>
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- FAQ
+    ============================ -->
+                    <section id="idocs_faq">
+                        <h2>FAQ</h2>
+                        <p class="text-4">A FAQ is a list of frequently asked questions (FAQs) and answers on a
+                            particular topic.
+                        </p>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="accordion accordion-alterate arrow-right" id="popularTopics">
+                                    <div class="card">
+                                        <div class="card-header" id="heading1">
+                                            <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse"
+                                                    data-target="#collapse1" aria-expanded="false"
+                                                    aria-controls="collapse1">how do i lock the specific card?</a> </h5>
+                                        </div>
+                                        <div id="collapse1" class="collapse" aria-labelledby="heading1"
+                                            data-parent="#popularTopics">
+                                            <div class="card-body"> 
+                                                go to /view card there will be there sections, select “Unlock/Lock This Card” </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- Source & Credits
+    ============================ -->
+                    <section id="idocs_source_credits">
+                        <h1 class="pompoki-font">Source & Credits</h1>
+
+                        <div class="Iam"> <h5 style="text-align: center; font-family: Impact, sans-serif;">This project is possible thanks to these libaries & homans!!</h5>
+                            <b>
+                                <span class="innerIam pompoki-font">
+                                    <span style="color: #850BFB;"> <i class="fa-brands fa-bootstrap"></i> Bootstrap 5</span><br />
+                                    <span style="color: #fd7b30;"> <span style="font-family: Arial, Helvetica, sans-serif;">hljs</span> Highlight Js</span><br />
+                                    <span style="color: #a2d835;"> <span style="font-family: Arial, Helvetica, sans-serif;">jQ</span> jQuery</span><br />
+                                    <span style="color: #821a68;"> <span style="font-family: Arial, Helvetica, sans-serif;">MP</span> Magnific Popup</span><br />
+                                    <span style="color: #2d3379;"> iDoc</span><br />
+                                    <span style="color: #fbcf0b;"> <i class="fa-brands fa-js"></i> JavaScript</span><br />
+                                    <span style="color: #1962b5;"> <i class="fa-brands fa-css3-alt"></i> CSS</span><br />
+                                    <span style="color: #fb6f0b;"> <i class="fa-brands fa-html5"></i> HTML</span><br />
+                                    <span style="color: #FCF7F4;"> @testwak</span><br />
+                                    
+                                    
+                                </span>
+                            </b>
+                        </div>
+                    </section>
+
+
+
+                    <!-- Support
+    ============================ -->
+                    <section id="idocs_support">
+                        <h1 class="pompoki-font">Support</h1>
+                        <p>If this documentation doesn't answer your questions, So, Please send us Email via
+                            
+                        </p>
+                        <p> ("testwak", 'I', "Me"), located in GMT +7 time zone and i answer all questions within 12-24 hours in
+                            weekdays. In
+                            some rare cases the waiting time can be to 48 hours. (except holiday seasons which might
+                            take longer).</p>
+                        
+                    </section>
+
+                    <hr class="divider">
+
+                    <!-- Changelog
+    ============================ -->
+
+                    <section id="idocs_changelog">
+                        <h1 class="pompoki-font">Changelog</h1>
+                        <p class="text-4">See what's new added, changed, fixed, improved or updated in the latest
+                            versions. </p>
+
+                        <h3 id="v1-0">Version 1.0 <small class="text-muted">(13 May, 2025)</small></h3>
+                        <p>Initial Release</p>
+                    </section>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- Content end -->
+
+        <!-- Footer
+  ============================ -->
+        <footer id="footer" class="section bg-dark footer-text-light">
+            <div class="container">
+                <div style="
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    margin-top: 20px;
+                    ">
+                <img src="assets/images/logo.GIF" style="width: 60px; border-radius: 5px; margin-bottom: 10px;">
+                <span class="pompoki-font" style="font-size: 18px; color: white;">@POMPOKI.tcg</span>
+                </div>
+
+                <p class="text-2 text-center mb-0"> Not affiliated with Discord Nor Hoyoverse!</p>
+            </div>
+        </footer>
+        <!-- Footer end -->
+
+    </div>
+    <!-- Document Wrapper end -->
+
+    <!-- Back To Top -->
+    <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+            class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript
+============================ -->
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Highlight JS -->
+    <script src="assets/vendor/highlight.js/highlight.min.js"></script>
+    <!-- Easing -->
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Custom Script -->
+    <script src="assets/js/theme.js"></script>
+
+</body>
+
+</html>
