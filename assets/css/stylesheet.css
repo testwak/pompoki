@@ -31,6 +31,57 @@
 /*  0.1. Animation
 /* =================================== */
 
+
+.header-container {
+    position: relative;
+    display: inline-flex;
+    cursor: pointer;
+    max-width: 80vw;
+}
+
+.header-text {
+    overflow: hidden;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'PmPmFont';
+    color: #FCF7F4;
+    position: relative;
+    z-index: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.hash-symbol {
+    position: absolute;
+    right: -0.3rem;
+    top: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'PmPmFont';
+    color: #a0312d;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+    transform: translateX(100%);
+    padding-left: 0;
+    flex-shrink: 0;
+}
+
+.header-container:hover .hash-symbol {
+    opacity: 0.9;
+}
+
+.instructions {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    color: #777;
+    font-style: italic;
+}
+
+
+
 .typing-text {
     width: 100%;
     animation-delay: 4s;
@@ -70,6 +121,7 @@
     perspective: 1600px;
     z-index: 1;
     pointer-events: none; /* Allow scrolling through the container */
+    z-index: 0;
 }
 
 /* Floating card styles */
@@ -238,62 +290,21 @@
 }
   
   
-/* The tip box with the line */
-.whisper-tip-box {
-    display: flex;
-    margin-bottom: 20px;
-}
+.noteBoxes { 
+    border: 1px solid; 
+    border-radius: 5px; 
+    padding: 10px;
+    margin: 10px 0; 
+    width: 90%; } 
 
-/* Left vertical line styling */
-.whisper-tip-line {
-    width: 4px;
-    background-color: #a0312d;
-    border-radius: 4px;
-    margin-right: 16px;
-}
+.type1 { 
+    border-color: #a0312d; 
+    background-color: rgba(231, 111, 81, 0.1); } 
 
-/* Content area */
-.whisper-tip-content {
-    flex: 1;
+.picture { 
+    width: 15px; 
+    padding-right: 10px; 
 }
-
-/* Heading styling */
-.whisper-tip-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #FCF7F4;
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-
-/* Paragraph styling */
-.whisper-tip-text {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #f5f5f5;
-    margin: 0;
-}
-
-/* Demo controls */
-.demo-controls {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #FCF7F4;
-}
-
-.color-buttons {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.color-btn {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    }
 
 /* Command Categories */
 
@@ -363,8 +374,9 @@
     margin-right: 15px;
     margin-top: 15px;
     position: relative;
-    z-index: 2;
+    z-index: 0;
     box-shadow: 0 0 0 4px #a0312d;
+    position: relative;
 }
 
 .dsc-option-box {
@@ -515,39 +527,39 @@
     --text-color: #FCF7F4;
     --highlight-color: #a0312d;
   
-    padding: 0 1em 5em 2em;
+    padding: 0;
     font-family: Arial, sans-serif;
     font-size: var(--font-size);
     line-height: var(--line-height);
     color: var(--text-color);
-  }
+    overflow: hidden;
+}
   
-  .Iam p {
+.Iam p {
     height: var(--line-height);
     float: left;
     margin-right: 0.3em;
     margin-bottom: 3em;
-  }
+}
   
-  .Iam b {
+.Iam b {
     float: left;
     overflow: hidden;
     position: relative;
     height: calc(var(--line-height) * 3);
     top: 40px; /* Fixed value that works with animation */
-  }
+}
   
-  .Iam .innerIam {
+.Iam .innerIam {
     display: inline-block;
     color: var(--highlight-color);
     position: relative;
     white-space: nowrap;
     top: 0;
     left: 0;
-    
     animation: move var(--animation-speed) infinite var(--animation-delay);
     -webkit-animation: move var(--animation-speed) infinite var(--animation-delay);
-  }
+}
   
 /* Keyframes */
 @keyframes move {
@@ -741,10 +753,13 @@ h6 {
     line-height: 1.5;
     margin: 0 0 1.5rem 0;
     font-family: Roboto, sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.5em, 5vw, 1.5rem;
 }
 
 h2 {
@@ -1170,7 +1185,7 @@ blockquote,
 
 /* Background Dark */
 .bg-dark {
-    background-color: #451412 !important;
+    background-color: #a0312d !important;
 }
 
 .bg-dark-1 {
@@ -1436,7 +1451,7 @@ hr {
     left: 0;
     width: 100%;
     box-shadow: none;
-    border-bottom: 1px solid rgba(250, 250, 250, 0.3);
+    border-bottom: 1px solid rgba(250, 250, 250, 0);
 }
 
 .primary-menu.sticky-on {
