@@ -34,52 +34,35 @@
 
 .header-container {
     position: relative;
-    display: inline-flex;
-    cursor: pointer;
-    max-width: 80vw;
+    display: inline-block;
+    font-family: PmPmFont, sans-serif;
+    font-size: 1.50rem;
+    
+    cursor: default;
+    padding-right: 0em; /* Space for "#" to avoid clipping */
+    letter-spacing: 0.05em;
 }
 
 .header-text {
-    overflow: hidden;
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: 'PmPmFont';
-    color: #FCF7F4;
     position: relative;
     z-index: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    max-width: 100%;
 }
 
 .hash-symbol {
     position: absolute;
-    right: -0.3rem;
-    top: 0;
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: 'PmPmFont';
-    color: #a0312d;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    right: -1em; /* Positions "#" to the right */
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 0;
-    transform: translateX(100%);
-    padding-left: 0;
-    flex-shrink: 0;
+    opacity: 0;
+    color: #a0312d;
+    font-size: 1em;
+    transition: opacity 0.3s ease;
 }
 
 .header-container:hover .hash-symbol {
-    opacity: 0.9;
+    opacity: 1;
 }
-
-.instructions {
-    position: absolute;
-    bottom: 20px;
-    text-align: center;
-    color: #777;
-    font-style: italic;
-}
-
 
 
 .typing-text {
@@ -184,17 +167,19 @@
 
 .stat-card {
     background: transparent;
-    padding: 1rem;
+    padding: 0;
     border-radius: 10px;
     text-align: center;
     width: 150px;
-    height: 150px;
+    height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease;
     margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
 .stat-card:hover {
@@ -202,10 +187,10 @@
 }
 
 .stat-number {
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: 'PmPmFont';
     font-weight: bold;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
     color: #FCF7F4;
     position: relative;
 }
